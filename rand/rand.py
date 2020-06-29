@@ -24,6 +24,7 @@ import secrets
 import string
 import sys
 from abc import abstractmethod
+from secrets import SystemRandom
 from typing import final
 
 
@@ -68,7 +69,9 @@ class RandApp:
             self.complexity = self.__complexities[complexity]
 
         def generate(self):
-            complexity = self.complexity[0]
+            complexity = self.complexity
+
+            SystemRandom.shuffle(complexity, len(complexity))
 
             return "".join([secrets.choice(complexity) for _ in range(self.size)])
 
