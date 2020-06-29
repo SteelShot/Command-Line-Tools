@@ -69,9 +69,9 @@ class RandApp:
             self.complexity = self.__complexities[complexity]
 
         def generate(self):
-            complexity = self.complexity
+            complexity = list(self.complexity)
 
-            SystemRandom.shuffle(complexity, len(complexity))
+            SystemRandom().shuffle(complexity)
 
             return "".join([secrets.choice(complexity) for _ in range(self.size)])
 
