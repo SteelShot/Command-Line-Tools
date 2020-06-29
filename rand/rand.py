@@ -61,7 +61,7 @@ class RandApp:
         __complexities = [string.ascii_lowercase,
                           string.ascii_letters,
                           string.ascii_letters + string.digits,
-                          string.ascii_letters + string.digits + string.punctuation]
+                          string.ascii_letters + string.digits + "+_|@#^!*-?%$&=[](){}~:;"]
 
         def __init__(self, size, complexity):
             super().__init__(size if size >= 8 else 8)
