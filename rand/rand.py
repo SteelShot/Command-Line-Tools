@@ -1,4 +1,4 @@
-#! python3.8
+#! python3
 
 __copyright__ = """
     Copyright (C) 2020 Džiugas Eiva
